@@ -1,0 +1,25 @@
+#app{
+    --min-width:1280px;
+    --navigation-font-size:30px;
+    --input-font-size:20px;
+}
+.light{
+    --bg-color:#b4e1ff;
+    /* 边框 */
+    --border-color:#328ecc;
+    --active-border-color:#10ac25;
+    /* 字体 */
+    --font-color:#000;
+}
+.night{
+    --bg-color:#1a1a1a;
+    --border-color: #e4a1a1;
+    --active-border-color: #10ac25;
+    --font-color:#fff;
+}
+/* 深色模式 */
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        
+    }
+  } */

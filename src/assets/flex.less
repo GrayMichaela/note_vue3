@@ -1,0 +1,118 @@
+// flex-flow=flex-direction,flex-wrap
+// flex=grow,shrink,basis
+// order排序小的在前
+.flex{
+    display: flex;
+    &-inline{
+        display: inline-flex;
+    }
+    &-fdr{
+        flex-direction: row;
+        &-r{
+            flex-direction: row-reverse;
+        }
+    }
+    &-fdc{
+        flex-direction: column;
+        &-r{
+            flex-direction: column-reverse;
+        }
+    }
+    &-fw{
+        &-n{
+            flex-wrap: nowrap;
+        }
+        &-w {
+            flex-wrap: wrap;
+        }
+    }
+    
+    &-jc{
+        &-center{
+            justify-content:center
+        }
+        &-fs{
+            justify-content: flex-start;
+        }
+        &-fe{
+            justify-content: flex-end
+        }
+        &-sb{
+            justify-content: space-between;
+        }
+        &-sa{
+            justify-content: space-around;
+        }
+        &-se{
+            justify-content: space-evenly;
+        }
+    }
+    &-ai{
+        &-center{
+            align-items:center;
+        }
+        &-fs{
+            align-items: flex-start;
+        }
+        &-fe{
+            align-items: flex-end
+        }
+        &-baseline{
+            align-items: baseline;
+        }
+        &-stretch{
+            align-items:stretch;
+        }
+    }
+    &-ac{
+        &-center{
+            align-content:center;
+        }
+        &-fs{
+            align-content: flex-start;
+        }
+        &-fe{
+            align-content: flex-end
+        }
+        &-sb{
+            align-content: space-between;
+        }
+        &-sa{
+            align-content: space-around;
+        }
+        &-stretch{
+            align-content:stretch;
+        }
+    }
+    .item{
+        &-fg1{
+            flex-grow: 1;
+        }
+        &-fg0{
+            flex-grow: 0;
+        }
+        &-fs1{
+            flex-shrink: 1;
+        }
+        &-fs0{
+            flex-shrink: 0;
+        }
+        &-as{
+            &-center{
+                align-self:center;
+            }
+            &-fs{
+                align-self: flex-start;
+            }
+            &-fe{
+                align-self: flex-end
+            }
+            &-stretch{
+                align-self:stretch;
+            }
+            &-baseline{
+                align-self: baseline;
+            }
+        }
+    }
+}
