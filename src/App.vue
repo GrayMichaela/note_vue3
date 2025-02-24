@@ -5,7 +5,7 @@ import {menus} from '@/router'
 const route=useRoute()
 const searchValue=ref('')
 const filterMenus=computed(()=>menus.filter(v=>{
-  if(searchValue.value.trim()){
+  if(searchValue.value){
     // 搜name
     const isName=v.name.search(searchValue.value)>=0
     // 搜标题
@@ -20,7 +20,7 @@ const filterMenus=computed(()=>menus.filter(v=>{
 <template>
   <div id="root" class="light flex flex-ai-center flex-jc-center">
     <div id="menus">
-      <input type="text" v-model="searchValue"  id="search"/>
+      <input type="text" v-model.trim="searchValue" id="search"/>
       <RouterLink :to="{name:item.name}" :class="['menu flex flex-ai-center',route.name===item.name&&'menu-active']" v-for="item in filterMenus">{{ item?.meta.title||item.name }}</RouterLink>
     </div>
     <div class="item-fg1 item-as-stretch" id="content">
@@ -57,11 +57,13 @@ const filterMenus=computed(()=>menus.filter(v=>{
     }
   }
   #search{
+    position: sticky;
+    top: 0;
     box-sizing: border-box;
     border-radius: 3px;
     padding:0 10px;
     font-size: var(--input-font-size);
-    color: var(--font-color);
+    color: var(--input-color);
     border: none;
     width:90%;
     height: 50px;
@@ -73,5 +75,6 @@ const filterMenus=computed(()=>menus.filter(v=>{
 #content{
   padding: 10px;
   box-sizing: border-box;
+  overflow: auto;
 }
 </style>

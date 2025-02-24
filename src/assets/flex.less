@@ -6,23 +6,27 @@
     &-inline{
         display: inline-flex;
     }
-    &-fdr{
-        flex-direction: row;
-        &-r{
+    &-fd{
+        &-row{
+            flex-direction: row;
+        }
+        &-rr{
             flex-direction: row-reverse;
         }
     }
-    &-fdc{
-        flex-direction: column;
-        &-r{
+    &-fd{
+        &-column{
+            flex-direction: column;
+        }
+        &-cr{
             flex-direction: column-reverse;
         }
     }
     &-fw{
-        &-n{
+        &-nowrap{
             flex-wrap: nowrap;
         }
-        &-w {
+        &-wrap{
             flex-wrap: wrap;
         }
     }

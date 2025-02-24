@@ -2,6 +2,7 @@
     --min-width:1280px;
     --navigation-font-size:30px;
     --input-font-size:20px;
+    --input-color:#000;
 }
 .light{
     --bg-color:#b4e1ff;
